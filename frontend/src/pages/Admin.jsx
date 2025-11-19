@@ -26,12 +26,12 @@ export default function Admin({ user, onLogout }) {
 
   async function fetchData() {
     const headers = { Authorization: "Bearer " + token };
-    const ri = await fetch("http://localhost:5000/api/instructors", {
+    const ri = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/instructors", {
       headers,
     });
     if (ri.ok) setInstructors(await ri.json());
 
-    const rc = await fetch("http://localhost:5000/api/courses", { headers });
+    const rc = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/courses", { headers });
     if (rc.ok) setCourses(await rc.json());
 
     const rl = await fetch("http://localhost:5000/api/lectures", { headers });
@@ -40,7 +40,7 @@ export default function Admin({ user, onLogout }) {
 
   async function addCourse() {
     try {
-      const res = await fetch("http://localhost:5000/api/courses", {
+      const res = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/courses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ export default function Admin({ user, onLogout }) {
         date: lectureForm.date,
         numberOfBatches: parseInt(lectureForm.numberOfBatches, 10),
       };
-      const res = await fetch("http://localhost:5000/api/lectures", {
+      const res = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/lectures", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
