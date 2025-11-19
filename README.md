@@ -35,18 +35,6 @@ The Online Lecture Scheduling System is a full-stack MERN application designed f
 - Quick actions
 - Clean and responsive design
 
-### 🌐 Frontend
-- React (Vite)
-- React Router
-- Bootstrap / Custom CSS
-- REST API integration
-
-### 🛠 Backend
-- Node.js + Express
-- MongoDB Atlas (Mongoose)
-- Authorization middleware
-- MVC Structure
-
 ## 🚀 Tech Stack
 
 ### Frontend
@@ -80,12 +68,16 @@ git clone https://github.com/AbhayCodes-dev/online-lecture-scheduling.git
 
 ### Backend Setup
 cd backend
+
 npm install
+
 npm start
 
 ### Frontend Setup
 cd ../frontend
+
 npm install
+
 npm run dev
 
 ## 🧾 Environment Variables (Backend)
@@ -93,7 +85,9 @@ npm run dev
 Create a `.env` file inside the backend folder:
 
 MONGO_URI=your_mongodb_atlas_connection_string
+
 JWT_SECRET=your_jwt_secret_key
+
 PORT=5000
 
 (Do NOT commit .env — credentials will be shared separately.)
@@ -104,8 +98,6 @@ PORT=5000
 - Role-based access control
 - Node_modules + env protected via .gitignore
 
-## 📹 Screenshots & Demo
-(Add screenshots or video demo later.)
 
 ## 📘 Documentation
 - Clean MVC backend structure
