@@ -9,7 +9,7 @@ export default function Instructor({ user, onLogout }) {
   }, []);
 
   async function fetchLectures() {
-    const res = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/lectures", {
+    const res = await fetch("http://localhost:5000/api/lectures", {
       headers: { Authorization: "Bearer " + token },
     });
     if (res.ok) {

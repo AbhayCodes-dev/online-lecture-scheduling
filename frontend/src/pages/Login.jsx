@@ -8,7 +8,7 @@ export default function Login({ onLogin }) {
   const login = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://online-lecture-scheduling-iq89.onrender.com/api/auth/login", {
+      const res = await fetch("http://localhost:5000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
